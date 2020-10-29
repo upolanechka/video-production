@@ -6,6 +6,7 @@ body {
     background: #17191C;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin: 0;
 }
 
 a {
@@ -36,6 +37,9 @@ p {
 
 .main-page-wrapper {
     background: url("./images/bg/hero.jpg") center top no-repeat, url("./images/bg/bottom-pic.jpg") right bottom 307px no-repeat;
+    height: 100%;
+    weight: 100%;
+    overflow: hidden;
 }
 
 .container {
@@ -44,9 +48,9 @@ p {
 }
 
 header {
-    height: 90px;
+    min-height: 90px;
     position: relative;
-    margin-bottom: 150px;
+    margin-bottom: 162px;
 }
 
 .logo {
@@ -65,8 +69,9 @@ header {
 
 .menu {
     position: absolute;
-    top: 42px;
-    left: 439px;
+    top: 33px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .menu__footer {
@@ -78,7 +83,7 @@ header {
 .menu__item {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 54px;
+    margin-right: 53px;
 }
 
 .menu__item:last-child {
@@ -96,8 +101,8 @@ header {
 
 .contacts {
     position: absolute;
-    top: 26.64px;
-    right: 0px;
+    top: 17px;
+    right: 8px;
     font-style: normal;
     text-align: right;
 }
@@ -105,7 +110,6 @@ header {
 .contacts__tel {
     text-decoration: none;
     font-size: 26px;
-    margin-bottom: 2px;
 }
 
 .contacts__dropdown-title {
@@ -121,7 +125,7 @@ header {
 
 .preview {
     width: 780px;
-    margin-bottom: 233px;
+    margin-bottom: 242px;
     margin-left: 183px;
 }
 
@@ -143,9 +147,9 @@ header {
 button {
     background: #FF3D00;
     border-radius: 35px;
-    padding: 18px 53px;
+    padding: 17px 51px;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 19px;
     font-weight: bold;
     text-transform: uppercase;
@@ -156,15 +160,15 @@ button {
 }
 
 .preview__button {
-    margin-left: 295px;
+    margin-left: 291px;
 }
 
 .button--btn--color-red {
     background: #FF3D00;
     border-radius: 35px;
-    padding: 18px 53px;
+    padding: 18px 45px;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 19px;
     font-weight: bold;
     text-transform: uppercase;
@@ -175,14 +179,13 @@ button {
 .button--color-none {
     background: white;
     color: #FF5500;
+    padding: 16px 45px;
     border: 2px solid #FF5500;
-    font-size: 14px;
-    margin-left: 22px;
-    margin-top: 30px;
+    font-size: 16px;
 }
 
 .video {
-    margin-bottom: 180px;
+    margin-bottom: 145px;
 }
 
 .video__item {
@@ -192,52 +195,51 @@ button {
     display: inline-block;
     margin-right: 28px;
     width: 362px;
-    margin-right: 27px;
+    margin-right: 25px;
     color: #010001;
+    vertical-align: top;
+    padding: 34px 34px 0px 29px;
 }
 
 .video__item:last-child {
     margin-right: 0;
+    padding: 35px 27px 0px 26px;
 }
 
 .video__item:nth-child(2) {
-    border: 5px solid #CCCCCC;
+    border: 7px solid #CCCCCC;
+    padding: 27px 27px 0px 22px;
 }
 
 .video__img-wrapper {
     position: relative;
     min-height: 100px;
     padding: 36px, 29px;
-    margin-left: 29px;
-    margin-top: 40px;
 }
 
 .video__content {
-    padding: 36px, 34px, 71px, 22px;
     color: #666666;
 }
 
 .video__subtitle {
     font-weight: bold;
     color: #000000;
-    font-size: 32px;
-    margin-bottom: 17px;
-    margin-left: 22px;
+    font-size: 30px;
 }
 
+.video__desc {
+    padding: 24px 0 8px;
+}
 .video__desc-block {
     display: inline-block;
     vertical-align: top;
     color: #666666;
     font-size: 16px;
     width: 102px;
-    margin-right: 60px;
-    margin-bottom: 25px;
-    margin-left: 22px;
 }
 
 .video__desc-block:last-child {
-    margin-right: 34px;
+    margin-left: 36px;
 }
 
 .video__desc-block-text {
@@ -247,21 +249,23 @@ button {
 .video__text {
     color: #666666;
     font-size: 14px;
-    margin-left: 22px;
+    margin-bottom: 39px;
 }
 
 .news__title {
     font-weight: 800;
     font-size: 36px;
-    margin-bottom: 30px;
+    margin-bottom: 47px;
     text-transform: uppercase;
 }
 
 .news__item {
     width: 557px;
+    height: 394px;
     display: inline-block;
     vertical-align: top;
     position: relative;
+    margin-right: 15px;
 }
 
 .news__cover {
@@ -270,6 +274,7 @@ button {
     height: 100%;
     object-fit: cover;
     opacity: 40%;
+    border-radius: 5px;
 }
 
 .news__content {
@@ -277,27 +282,27 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 25px 30px;
+    padding: 17px 30px;
     min-height: 140px;
 }
 
 .news__date-month.news__date-year {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 12.5px;
 }
 
 .news__subtitle {
     font-weight: bold;
     font-size: 24px;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .news__text {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .news__list {
-    margin-bottom: 58px;
+    margin-bottom: 48px;
 }
 
 .paginator {
@@ -332,25 +337,28 @@ button {
     line-height: 30px;
 }
 
+.about-us {
+    margin-bottom: 53px; 
+}
+
 .about:before {
     content: "";
     display: inline-block;
     vertical-align: top;
     width: 490px;
-    height: 505px;
+    height: 498px;
     background: url("./images/decor/cameraman.jpg") center center / cover no-repeat;
 }
 
 .about__desc {
     background: #ffffff;
-    padding: 70px 81px;
+    padding: 68px 105px 75px 96px;
     display: inline-block;
     vertical-align: top;
-    width: 785px;
+    width: 780px;
     border-radius: 5px;
-    margin-left: -141px;
-    margin-top: 97px;  
-    margin-bottom: 53px;  
+    margin-left: -133px;
+    margin-top: 105px;   
 }
 
 .about__title {
@@ -362,7 +370,7 @@ button {
 }
 
 .about__desc-text {
-    margin-bottom: 43px;
+    margin-bottom: 37px;
     color: #060606;
 }
 
@@ -380,7 +388,6 @@ button {
 .footer {
     height: 146px;
     position: relative;
-    margin-top: 12px;
 }
 
 .socials__item {
@@ -391,8 +398,8 @@ button {
 
 .socials {
     position: absolute;
-    top: 38px;
-    right: 270px;
+    top: 40px;
+    right: 267px;
 }
 
 .socials__item:last-child {
