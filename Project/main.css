@@ -141,8 +141,7 @@ header {
 }
 
 .contacts {
-    margin-top: 5px;
-    margin-right: 10px;
+    margin-right: 8px;
     font-style: normal;
     text-align: right;
 }
@@ -153,6 +152,7 @@ header {
 }
 
 .contacts__dropdown-title {
+    display: inline-block;
     font-size: 13px;
     text-decoration: underline;
     color: #FF3D00;
@@ -228,6 +228,10 @@ button {
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
+}
+
+.service__button--color-none {
+    background: none;
 }
 
 .button--btn--color-grey {
@@ -404,6 +408,7 @@ button {
 
 .paginator__item--active .paginator__link {
     background: #FF5500;
+    color: white;
 }
 
 .paginator__list {
@@ -599,7 +604,7 @@ button {
 }
 
 .page-content {
-    background: #e5e5e5;
+    background: #f4f5f5;
     color: #303030;
     padding-top: 41px;
     min-height: 1000px;
@@ -648,7 +653,7 @@ button {
 }
 
 .inner-section--bg--grey {
-    background: #F4F5F5;
+    background: #E5E5E5;
     padding: 92px 0px 78px;
 }
 
@@ -715,7 +720,7 @@ button {
     display: inline-flex;
     flex-direction: column;
     padding: 50px 30px;
-    background: #F4F5F5;
+    background: #e5e5e5;
     border-radius: 5px;
 }
 
@@ -732,14 +737,17 @@ button {
     margin-bottom: 19px;
 }
 
+.review__userdata {
+    margin-left: 19px;
+    margin-bottom: 12px;
+}
+
 .review__user {
     display: flex;
     align-items: center;
     font-weight: bold;
     font-size: 24px;
     color: #2E77A4;
-    margin-bottom: 11px;
-    margin-left: 16px;
 }
 
 .review__user:after {
@@ -751,14 +759,14 @@ button {
 .review__tags {
     display: flex;
     align-items: flex-start;
-    margin-left: 25px;
+    margin-top: 8px;
 }
 
 .tag {
     font-size: 13px;
     color: #303030;
     padding: 9px 12px;
-    background:#E7E7E7;
+    background:#d7d7d7;
     border-radius: 35px;
 }
 
@@ -919,19 +927,31 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: bounce 2s infinite;
+    animation: rotateIn 0.9s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 .central__logo {
     margin-bottom: 60px;
 }
 
-@keyframes bounce {
+
+@keyframes rotateIn {
 0% {
-    transform: translateX(0);
+    transform: scale(0.1) rotate(30deg);
+}
+
+50% {
+    transform: rotate(-10deg);
+}
+
+70% {
+    transform: rotate(3deg);
 }
 
 100% {
-    transform: translateX(-30);
+    transform: scale(1);
+    opacity: 1;
 }
 }
