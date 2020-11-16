@@ -930,6 +930,8 @@ button {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: -10px;
+    margin-right: -13px;
 
 }
 .controls__item {
